@@ -3,9 +3,12 @@
     padding: @badge-padding;
     border-radius: 0.1875rem;
 
-    .for-each(@badge in @badge-list) {
-        .make-badge(@badge);
-    }
+    each(@badges, .(@color, @name) {
+        &.badge-@{name} {
+            background-color: @color !important;
+            border: 1px solid @color;
+        }
+    });
 
     .material-icons {
         font-size: 1rem;

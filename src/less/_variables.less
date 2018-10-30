@@ -322,15 +322,14 @@
 // 7. Badge
 // ==========================================================================
 
-/* stylelint-disable indentation */
-@badge-list:                                ~"default" @gray-8,
-                                            ~"brand" @green,
-                                            ~"blue" @blue,
-                                            ~"purple" @purple,
-                                            ~"yellow" @yellow,
-                                            ~"red" @red;
-
-/* stylelint-enable indentation */
+@badges: {
+    default: @gray-8;
+    brand: @green;
+    blue: @blue;
+    purple: @purple;
+    yellow: @yellow;
+    red: @red;
+}
 
 @badge-padding:                             @base-margin * 0.125 @base-margin-sm;
 

@@ -1,20 +1,20 @@
 {
     "extends": ["stylelint-config-standard"],
     "ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
-    "plugins": [
-        "stylelint-csstree-validator",
-        "stylelint-declaration-block-no-ignored-properties"
-    ],
     "rules": {
+        "at-rule-empty-line-before": null,
         "at-rule-name-space-after": "always",
         "at-rule-no-unknown": null,
+        "at-rule-semicolon-newline-after": null,
+        "block-closing-brace-newline-after": null,
+        "block-closing-brace-newline-before": null,
         "color-hex-case": [ "lower", {
             "message": "Lowercase letters are easier to distinguish from numbers"
         }],
         "color-named": "never",
-        "csstree/validator": true,
-        "declaration-block-semicolon-newline-after": "always-multi-line",
-        "declaration-block-semicolon-newline-before": "never-multi-line",
+        "comment-empty-line-before": null,
+        "declaration-block-semicolon-newline-after": null,
+        "declaration-block-semicolon-newline-before": null,
         "declaration-block-semicolon-space-after": "always-single-line",
         "declaration-no-important": true,
         "color-hex-length": "long",
@@ -31,7 +31,7 @@
         "no-descending-specificity": null,
         "no-duplicate-selectors": true,
         "number-max-precision": 4,
-        "plugin/declaration-block-no-ignored-properties": true,
+        "property-no-unknown": null,
         "selector-attribute-quotes": "always",
         "selector-list-comma-newline-after": "always",
         "selector-list-comma-newline-before": "never-multi-line",

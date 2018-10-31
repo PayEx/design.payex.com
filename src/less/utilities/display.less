@@ -1,5 +1,4 @@
-/* stylelint-disable declaration-no-important */
-/* stylelint-disable block-opening-brace-space-before */
+/* stylelint-disable declaration-no-important, block-opening-brace-space-before */
 
 .display-rules(@infix) {
     .d@{infix}-none           { display: none !important; }
@@ -12,7 +11,7 @@
     .d@{infix}-inline-flex    { display: inline-flex !important; }
 }
 
-/* stylelint-enable block-opening-brace-space-before */
+/* stylelint-enable */
 
 /*
  * Creating base-classes like ".d-none"
@@ -31,7 +30,7 @@
         .display-rules(~"-@{infix}");
     }
 
-    .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
+    // .media-breakpoint-up(@infix, @breakpoint, { .ruleset(); });
 }
 
 /*

@@ -172,28 +172,30 @@
 // Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:                         30px;
 
-/* stylelint-disable indentation */
-@grid-breakpoints:                          ~"xs" 0,
-                                            ~"sm" 576px,
-                                            ~"md" 768px,
-                                            ~"lg" 992px,
-                                            ~"xl" 1200px,
-                                            ~"xxl" 1600px;
+@grid-breakpoints: {
+    xs: 0;
+    sm: 576px;
+    md: 768px;
+    lg: 992px;
+    xl: 1200px;
+    xxl: 1600px;
+}
 
-@container-max-widths:                      540px,
-                                            720px,
-                                            960px,
-                                            1140px,
-                                            1460px;
-/* stylelint-enable indentation */
+@container-max-widths: {
+    sm: 540px;
+    md: 720px;
+    lg: 960px;
+    xl: 1140px;
+    xxl: 1460px;
+}
 
 /* Media queries breakpoints */
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
-@screen-xs-min:                             extract(extract(@grid-breakpoints, 2), 2);
-@screen-sm-min:                             extract(extract(@grid-breakpoints, 3), 2);
-@screen-md-min:                             extract(extract(@grid-breakpoints, 4), 2);
-@screen-lg-min:                             extract(extract(@grid-breakpoints, 5), 2);
-@screen-xl-min:                             extract(extract(@grid-breakpoints, 6), 2);
+@screen-xs-min:                             @grid-breakpoints[xs];
+@screen-sm-min:                             @grid-breakpoints[sm];
+@screen-md-min:                             @grid-breakpoints[md];
+@screen-lg-min:                             @grid-breakpoints[lg];
+@screen-xl-min:                             @grid-breakpoints[xl];
 
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:                             (@screen-sm-min - 1);

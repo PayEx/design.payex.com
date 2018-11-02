@@ -7,7 +7,7 @@ import pkg from "~/package.json";
 
 const AppHeader = () => (
     <header className="topbar topbar-fixed designguide-header">
-        <a className="topbar-logo" href="#"></a>
+        <a className="topbar-logo" href="/"></a>
         <nav className="header-links">
             <NavLink exact to="/" activeClassName="active">Home</NavLink>
             <NavLink to="/docs" activeClassName="active">Documentation</NavLink>

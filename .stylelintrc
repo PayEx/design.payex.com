@@ -1,6 +1,9 @@
 {
     "extends": ["stylelint-config-standard"],
     "ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
+    "plugins": [
+        "stylelint-declaration-block-no-ignored-properties"
+    ],
     "rules": {
         "at-rule-empty-line-before": null,
         "at-rule-name-space-after": "always",
@@ -13,8 +16,8 @@
         }],
         "color-named": "never",
         "comment-empty-line-before": null,
-        "declaration-block-semicolon-newline-after": null,
-        "declaration-block-semicolon-newline-before": null,
+        "declaration-block-semicolon-newline-after": "always-multi-line",
+        "declaration-block-semicolon-newline-before": "never-multi-line",
         "declaration-block-semicolon-space-after": "always-single-line",
         "declaration-no-important": true,
         "color-hex-length": "long",

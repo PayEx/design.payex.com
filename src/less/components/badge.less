@@ -3,12 +3,14 @@
     padding: @badge-padding;
     border-radius: 0.1875rem;
 
-    each(@badges, .(@color, @name) {
+    .for-each(@badge in @badge-list) {
+        @name: at(@badge, 1);
+
         &.badge-@{name} {
-            background-color: @color !important;
-            border: 1px solid @color;
+            background-color: at(@badge, 2) !important;
+            border: 1px solid at(@badge, 2);
         }
-    });
+    }
 
     .material-icons {
         font-size: 1rem;

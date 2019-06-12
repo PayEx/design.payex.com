@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 import expandable from "$/px-script/main/expandable";
@@ -59,19 +59,23 @@ const Accordion = () => (
     </>
 );
 
-const Expandable = () => {
-    useEffect(() => expandable.init());
+class Expandable extends Component {
+    componentDidMount () {
+        expandable.init();
+    }
 
-    return (
-        <DocContainer docToc>
-            <p className="lead">
-                Accordion
-            </p>
-            <Overview />
-            <Accordion />
-        </DocContainer>
-    );
-};
+    render () {
+        return (
+            <DocContainer docToc>
+                <p className="lead">
+                    Accordion
+                </p>
+                <Overview />
+                <Accordion />
+            </DocContainer>
+        );
+    }
+}
 
 export default Expandable;
 

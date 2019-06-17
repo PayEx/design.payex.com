@@ -37,7 +37,6 @@ module.exports = (env, argv) => {
             chunkFilename: "scripts/[name].js?[hash]",
             publicPath: basename
         },
-        // target: "async-node",
         devtool: "source-map",
         devServer: {
             contentBase: path.resolve(__dirname, `dist${basename}`),

@@ -7,49 +7,45 @@ const MainColors = () => (
     <>
         <h2 id="main-colors">Main colors</h2>
         <p>The main color palette of Swedbank Pay</p>
-        <ComponentPreview language="html" showCasePanel>
-            <div className="row color-container">
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Yellow" hex="#fdc129" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Brown" hex="#512b2b" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Orange Main" hex="#ee7023" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Info Turquoise" hex="#8acdc3" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Info Pink" hex="#efb7b6" />
-                </div>
+        <div className="row">
+            <div className="col mb-lg-0">
+                <ColorPreview name="Yellow" hex="#fdc129" />
             </div>
-            <div className="row color-container">
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Apricot" hex="#fbf2ea" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Turquoise" hex="#31a3ae" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="Turquoise Links" hex="#257886" />
-                </div>
-                <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="red-medium" hex="#dd3300" />
-                </div>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Brown" hex="#512b2b" />
             </div>
-        </ComponentPreview>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Orange Main" hex="#ee7023" />
+            </div>
+        </div>
+        <div className="row">
+            <div className="col mb-lg-0">
+                <ColorPreview name="Info Turquoise" hex="#8acdc3" />
+            </div>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Info Pink" hex="#efb7b6" />
+            </div>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Apricot" hex="#fbf2ea" />
+            </div>
+        </div>
+        <div className="row color-container">
+            <div className="col mb-lg-0">
+                <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
+            </div>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Turquoise" hex="#31a3ae" />
+            </div>
+            <div className="col mb-lg-0">
+                <ColorPreview name="Turquoise Links" hex="#257886" />
+            </div>
+        </div>
     </>
 );
 
 const AlertColors = () => (
     <>
         <h2 id="alert-colors">Alert colors</h2>
-        <ComponentPreview language="html" showCasePanel>
             <div className="row color-container">
                 <div className="col-12">
                     <ColorPreview name="brand-success" hex="#477d17" />
@@ -79,14 +75,12 @@ const AlertColors = () => (
                     <ColorPreview name="brand-info-light" hex="#f0f9fb" />
                 </div>
             </div>
-        </ComponentPreview>
     </>
 );
 
 const Grayscale = () => (
     <>
         <h2 id="grayscale">Grayscale</h2>
-        <ComponentPreview language="html" showCasePanel>
             <div className="row color-container">
                 <div className="col-12">
                     <ColorPreview name="black" hex="#000000" color="#eaeaea" />
@@ -131,7 +125,6 @@ const Grayscale = () => (
                     <ColorPreview name="white" hex="#ffffff" color="black" />
                 </div>
             </div>
-        </ComponentPreview>
     </>
 );
 

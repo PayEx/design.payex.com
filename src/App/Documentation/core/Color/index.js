@@ -10,33 +10,33 @@ const MainColors = () => (
         <ComponentPreview language="html" showCasePanel>
             <div className="row color-container">
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="orange-medium" hex="#ee7023" />
+                    <ColorPreview name="Yellow" hex="#fdc129" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="orange-light" hex="#ff9900" />
+                    <ColorPreview name="Brown" hex="#512b2b" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="orange-bright" hex="#ffcc00" />
+                    <ColorPreview name="Orange Main" hex="#ee7023" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="green" hex="#82b236" />
+                    <ColorPreview name="Info Turquoise" hex="#8acdc3" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="blue" hex="#5b8ad6" />
+                    <ColorPreview name="Info Pink" hex="#efb7b6" />
                 </div>
             </div>
             <div className="row color-container">
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="blue-light" hex="#a2c9ce" />
+                    <ColorPreview name="Apricot" hex="#fbf2ea" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="blue-bright" hex="#d7e6e9" />
+                    <ColorPreview name="Light Turquoise" hex="#ebf8f2" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="teal" hex="#4893a0" />
+                    <ColorPreview name="Turquoise" hex="#31a3ae" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
-                    <ColorPreview name="blue-bright-alt" hex="#a3c9cf" />
+                    <ColorPreview name="Turquoise Links" hex="#257886" />
                 </div>
                 <div className="col-xl col-lg-2 col-12 mb-lg-0">
                     <ColorPreview name="red-medium" hex="#dd3300" />

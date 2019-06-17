@@ -251,40 +251,40 @@ exports[`Core: Color MainColors renders 1`] = `
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
+          hex="#fdc129"
+          name="Yellow"
+        />
+      </div>
+      <div
+        className="col-xl col-lg-2 col-12 mb-lg-0"
+      >
+        <ColorPreview
+          hex="#512b2b"
+          name="Brown"
+        />
+      </div>
+      <div
+        className="col-xl col-lg-2 col-12 mb-lg-0"
+      >
+        <ColorPreview
           hex="#ee7023"
-          name="orange-medium"
+          name="Orange Main"
         />
       </div>
       <div
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#ff9900"
-          name="orange-light"
+          hex="#8acdc3"
+          name="Info Turquoise"
         />
       </div>
       <div
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#ffcc00"
-          name="orange-bright"
-        />
-      </div>
-      <div
-        className="col-xl col-lg-2 col-12 mb-lg-0"
-      >
-        <ColorPreview
-          hex="#82b236"
-          name="green"
-        />
-      </div>
-      <div
-        className="col-xl col-lg-2 col-12 mb-lg-0"
-      >
-        <ColorPreview
-          hex="#5b8ad6"
-          name="blue"
+          hex="#efb7b6"
+          name="Info Pink"
         />
       </div>
     </div>
@@ -295,32 +295,32 @@ exports[`Core: Color MainColors renders 1`] = `
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#a2c9ce"
-          name="blue-light"
+          hex="#fbf2ea"
+          name="Apricot"
         />
       </div>
       <div
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#d7e6e9"
-          name="blue-bright"
+          hex="#ebf8f2"
+          name="Light Turquoise"
         />
       </div>
       <div
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#4893a0"
-          name="teal"
+          hex="#31a3ae"
+          name="Turquoise"
         />
       </div>
       <div
         className="col-xl col-lg-2 col-12 mb-lg-0"
       >
         <ColorPreview
-          hex="#a3c9cf"
-          name="blue-bright-alt"
+          hex="#257886"
+          name="Turquoise Links"
         />
       </div>
       <div

@@ -7,11 +7,20 @@ exports[`Core: Color AlertColors renders 1`] = `
   >
     Alert colors
   </h2>
+  <p>
+    These colors are used to visualize state, see 
+    <Link
+      to="/docs/components/alerts/"
+    >
+      Alert
+    </Link>
+     for an example.
+  </p>
   <div
-    className="row color-container"
+    className="row"
   >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#477d17"
@@ -19,7 +28,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f2f7eb"
@@ -27,15 +36,19 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#ff9900"
         name="brand-warning"
       />
     </div>
+  </div>
+  <div
+    className="row"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#fffae5"
@@ -43,7 +56,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f1bbb9"
@@ -51,15 +64,19 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#b24843"
         name="brand-error"
       />
     </div>
+  </div>
+  <div
+    className="row color-container"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#fceeed"
@@ -67,7 +84,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#2c7a8f"
@@ -75,7 +92,7 @@ exports[`Core: Color AlertColors renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f0f9fb"
@@ -94,73 +111,74 @@ exports[`Core: Color Grayscale renders 1`] = `
     Grayscale
   </h2>
   <div
-    className="row color-container"
+    className="row mt-3"
   >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#000000"
         name="black"
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#111111"
         name="nearblack"
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#262626"
         name="gray-dark"
       />
     </div>
+  </div>
+  <div
+    className="row"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#363636"
         name="gray-medium-dark"
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#404040"
         name="gray-medium"
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#545454"
         name="gray-medium-light"
       />
     </div>
+  </div>
+  <div
+    className="row color-container"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="#eaeaea"
         hex="#666666"
         name="gray-light"
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#999999"
@@ -168,15 +186,19 @@ exports[`Core: Color Grayscale renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#eaeaea"
         name="gray-bright"
       />
     </div>
+  </div>
+  <div
+    className="row color-container"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#bcbcbc"
@@ -184,7 +206,7 @@ exports[`Core: Color Grayscale renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f9f9f9"
@@ -192,15 +214,19 @@ exports[`Core: Color Grayscale renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f4f4f4"
         name="offwhite"
       />
     </div>
+  </div>
+  <div
+    className="row color-container"
+  >
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
         hex="#f0f0f0"
@@ -208,14 +234,16 @@ exports[`Core: Color Grayscale renders 1`] = `
       />
     </div>
     <div
-      className="col-12"
+      className="col"
     >
       <ColorPreview
-        color="black"
         hex="#ffffff"
         name="white"
       />
     </div>
+    <div
+      className="col"
+    />
   </div>
 </Fragment>
 `;

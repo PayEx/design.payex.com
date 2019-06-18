@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer } from "#";
+import { DocContainer } from "#";
 import ColorPreview from "./ColorPreview";
 
 const MainColors = () => (
@@ -46,85 +47,103 @@ const MainColors = () => (
 const AlertColors = () => (
     <>
         <h2 id="alert-colors">Alert colors</h2>
-            <div className="row color-container">
-                <div className="col-12">
-                    <ColorPreview name="brand-success" hex="#477d17" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-success-light" hex="#f2f7eb" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-warning" hex="#ff9900" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-warning-light" hex="#fffae5" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-error-border" hex="#f1bbb9" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-error" hex="#b24843" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-error-light" hex="#fceeed" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-info" hex="#2c7a8f" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="brand-info-light" hex="#f0f9fb" />
-                </div>
+        <p>
+            These colors are used to visualize state,
+            see <Link to="/docs/components/alerts/">Alert</Link> for an example.
+        </p>
+        <div className="row">
+            <div className="col">
+                <ColorPreview name="brand-success" hex="#477d17" />
             </div>
+            <div className="col">
+                <ColorPreview name="brand-success-light" hex="#f2f7eb" />
+            </div>
+            <div className="col">
+                <ColorPreview name="brand-warning" hex="#ff9900" />
+            </div>
+        </div>
+        <div className="row">
+            <div className="col">
+                <ColorPreview name="brand-warning-light" hex="#fffae5" />
+            </div>
+            <div className="col">
+                <ColorPreview name="brand-error-border" hex="#f1bbb9" />
+            </div>
+            <div className="col">
+                <ColorPreview name="brand-error" hex="#b24843" />
+            </div>
+        </div>
+        <div className="row color-container">
+            <div className="col">
+                <ColorPreview name="brand-error-light" hex="#fceeed" />
+            </div>
+            <div className="col">
+                <ColorPreview name="brand-info" hex="#2c7a8f" />
+            </div>
+            <div className="col">
+                <ColorPreview name="brand-info-light" hex="#f0f9fb" />
+            </div>
+        </div>
     </>
 );
 
 const Grayscale = () => (
     <>
         <h2 id="grayscale">Grayscale</h2>
-            <div className="row color-container">
-                <div className="col-12">
-                    <ColorPreview name="black" hex="#000000" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="nearblack" hex="#111111" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-dark" hex="#262626" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-medium-dark" hex="#363636" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-medium" hex="#404040" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-medium-light" hex="#545454" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-light" hex="#666666" color="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-light-alt" hex="#999999" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-bright" hex="#eaeaea" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="gray-bright-alt" hex="#bcbcbc" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="neargray" hex="#f9f9f9" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="offwhite" hex="#f4f4f4" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="nearwhite" hex="#f0f0f0" />
-                </div>
-                <div className="col-12">
-                    <ColorPreview name="white" hex="#ffffff" color="black" />
-                </div>
+        <div className="row mt-3">
+            <div className="col">
+                <ColorPreview name="black" hex="#000000" />
             </div>
+            <div className="col">
+                <ColorPreview name="nearblack" hex="#111111" />
+            </div>
+            <div className="col">
+                <ColorPreview name="gray-dark" hex="#262626" />
+            </div>
+        </div>
+        <div className="row">
+            <div className="col">
+                <ColorPreview name="gray-medium-dark" hex="#363636" />
+            </div>
+            <div className="col">
+                <ColorPreview name="gray-medium" hex="#404040" />
+            </div>
+            <div className="col">
+                <ColorPreview name="gray-medium-light" hex="#545454" />
+            </div>
+        </div>
+        <div className="row color-container">
+            <div className="col">
+                <ColorPreview name="gray-light" hex="#666666" />
+            </div>
+            <div className="col">
+                <ColorPreview name="gray-light-alt" hex="#999999" />
+            </div>
+            <div className="col">
+                <ColorPreview name="gray-bright" hex="#eaeaea" />
+            </div>
+        </div>
+        <div className="row color-container">
+            <div className="col">
+                <ColorPreview name="gray-bright-alt" hex="#bcbcbc" />
+            </div>
+            <div className="col">
+                <ColorPreview name="neargray" hex="#f9f9f9" />
+            </div>
+            <div className="col">
+                <ColorPreview name="offwhite" hex="#f4f4f4" />
+            </div>
+        </div>
+        <div className="row color-container">
+            <div className="col">
+                <ColorPreview name="nearwhite" hex="#f0f0f0" />
+            </div>
+            <div className="col">
+                <ColorPreview name="white" hex="#ffffff" />
+            </div>
+            <div className="col">
+            </div>
+        </div>
     </>
 );
 

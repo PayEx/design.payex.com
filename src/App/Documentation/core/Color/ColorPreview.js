@@ -6,7 +6,7 @@ const ColorPreview = ({ name, hex }) => {
 
     return (
         <div className="color-preview">
-            <div className="color-block" style={style}/>
+            <div className={`color-block${name === "white" ? " border" : ""}`} style={style}/>
             <p>
                 {name}
                 <small><br/>HEX: {hex}</small>

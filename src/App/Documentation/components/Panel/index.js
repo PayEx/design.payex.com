@@ -186,4 +186,4 @@ const Panel = () => (
 export default Panel;
 
 /* For testing */
-export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable, TableContent };
+export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable };

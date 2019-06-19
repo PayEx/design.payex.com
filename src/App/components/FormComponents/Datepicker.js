@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Addon } from "@/InputGroup";
+import { Addon, BtnAddon } from "@/InputGroup";
 
 const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, id }) => {
     const attrs = {
@@ -25,7 +25,14 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
             <div className="form-group">{"\n"}
                 <label htmlFor={id || null}>{label}</label>{"\n"}
                 <div className="input-group">{"\n"}
-                    {prefixValue ? <Addon type={ prefixType } value={ prefixValue } /> : null}{"\n"}
+                    {!prefixValue
+                        ? null
+                        : (!prefixType
+                            ? <Addon value={prefixValue}/>
+                            : (prefixType === "button"
+                                ? <BtnAddon value={prefixValue} className="input-group-addon" />
+                                : <Addon icon={prefixType} value={prefixValue} />))}
+                    {"\n"}
                     <input {...attrs} />{"\n"}
                 </div>
             </div>
@@ -34,6 +41,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
 
 Datepicker.propTypes = {
     format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
+    prefixType: PropTypes.oneOf(["button", "icon"]),
     time: PropTypes.bool,
     min: PropTypes.string,
     max: PropTypes.string,
@@ -45,3 +53,17 @@ Datepicker.propTypes = {
 };
 
 export default Datepicker;
+
+// !prefixType && prefixValue
+//     ? <Addon value={prefixValue}/>
+//     : (prefixType === "button"
+//         ? <BtnAddon className={className} value={prefixValue} />
+//         : <Addon icon={type} value={prefixValue} />);
+
+// !prefixValue
+//     ? null
+//     : (!prefixType
+//         ? <Addon value={prefixValue}/>
+//         : (prefixType === "button"
+//             ? <BtnAddon className={className} value={prefixValue} />
+//             : <Addon icon={prefixType} value={prefixValue}>))

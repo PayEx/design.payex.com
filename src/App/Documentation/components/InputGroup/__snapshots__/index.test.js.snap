@@ -123,7 +123,7 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      postfixBtnColor="primary"
+      postfixBtnType="primary"
       postfixType="button"
       postfixValue="Button"
       type="text"
@@ -133,10 +133,10 @@ exports[`Documentation: InputGroup ButtonAddons renders 1`] = `
 
 
     <InputGroup
-      postfixBtnColor="danger"
+      postfixBtnType="danger"
       postfixType="button"
       postfixValue="Button"
-      prefixBtnColor="secondary"
+      prefixBtnType="secondary"
       prefixType="button"
       prefixValue="Button"
       type="text"

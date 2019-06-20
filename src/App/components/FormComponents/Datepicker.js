@@ -30,7 +30,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
                         : (!prefixType
                             ? <Addon value={prefixValue}/>
                             : (prefixType === "button"
-                                ? <BtnAddon value={prefixValue} className="input-group-addon" />
+                                ? <BtnAddon value={prefixValue} className="input-group-addon" valIcon />
                                 : <Addon icon={prefixType} value={prefixValue} />))}
                     {"\n"}
                     <input {...attrs} />{"\n"}
@@ -53,17 +53,3 @@ Datepicker.propTypes = {
 };
 
 export default Datepicker;
-
-// !prefixType && prefixValue
-//     ? <Addon value={prefixValue}/>
-//     : (prefixType === "button"
-//         ? <BtnAddon className={className} value={prefixValue} />
-//         : <Addon icon={type} value={prefixValue} />);
-
-// !prefixValue
-//     ? null
-//     : (!prefixType
-//         ? <Addon value={prefixValue}/>
-//         : (prefixType === "button"
-//             ? <BtnAddon className={className} value={prefixValue} />
-//             : <Addon icon={prefixType} value={prefixValue}>))

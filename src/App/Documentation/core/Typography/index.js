@@ -46,6 +46,24 @@ const Headings = () => (
     </>
 );
 
+const PageTitle = () => (
+    <>
+        <h2 id="page-title">Page title</h2>
+        <p>
+            To emphasize a heading, use <Property value=".page-title" /> to add a light gray border under a heading.
+            This only works for heading tags and classes ( <PrismCode className="language-html">{"<h1>"}</PrismCode>... <PrismCode className="language-html">{"<h6>"}</PrismCode>/<Property value=".h1" />...<Property value=".h6"/>);
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <h1 className="page-title">Heading h1</h1>
+            <h2 className="page-title">Heading h2</h2>
+            <h3 className="page-title">Heading h3</h3>
+            <h4 className="page-title">Heading h4</h4>
+            <h5 className="page-title">Heading h5</h5>
+            <h6 className="page-title">Heading h6</h6>
+        </ComponentPreview>
+    </>
+);
+
 const Small = () => (
     <>
         <h2 id="small">Small</h2>
@@ -168,6 +186,7 @@ const Typography = () => (
         <p className="lead">Documentation and examples for PayEx DesignGuide typography.</p>
         <Fonts />
         <Headings />
+        <PageTitle />
         <Small />
         <Lead />
         <Inline />
@@ -180,4 +199,4 @@ const Typography = () => (
 export default Typography;
 
 /* For testing */
-export { Fonts, Headings, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };
+export { Fonts, Headings, PageTitle, Small, Lead, Inline, TextUtilities, Abbreviations, Blockquotes };

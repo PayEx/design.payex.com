@@ -455,6 +455,81 @@ exports[`Core: Typography Lead renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Typography PageTitle renders 1`] = `
+<Fragment>
+  <h2
+    id="page-title"
+  >
+    Page title
+  </h2>
+  <p>
+    To emphasize a heading, use 
+    <Property
+      value=".page-title"
+    />
+     to add a light gray border under a heading. This only works for heading tags and classes ( 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;h1&gt;
+    </PrismCode>
+    ... 
+    <PrismCode
+      className="language-html"
+      component="code"
+    >
+      &lt;h6&gt;
+    </PrismCode>
+    /
+    <Property
+      value=".h1"
+    />
+    ...
+    <Property
+      value=".h6"
+    />
+    );
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+  >
+    <h1
+      className="page-title"
+    >
+      Heading h1
+    </h1>
+    <h2
+      className="page-title"
+    >
+      Heading h2
+    </h2>
+    <h3
+      className="page-title"
+    >
+      Heading h3
+    </h3>
+    <h4
+      className="page-title"
+    >
+      Heading h4
+    </h4>
+    <h5
+      className="page-title"
+    >
+      Heading h5
+    </h5>
+    <h6
+      className="page-title"
+    >
+      Heading h6
+    </h6>
+  </ComponentPreview>
+</Fragment>
+`;
+
 exports[`Core: Typography Small renders 1`] = `
 <Fragment>
   <h2
@@ -517,6 +592,7 @@ exports[`Core: Typography renders 1`] = `
   </p>
   <Fonts />
   <Headings />
+  <PageTitle />
   <Small />
   <Lead />
   <Inline />

@@ -3,6 +3,7 @@ ol.breadcrumb {
     margin: @base-margin 0;
     padding-left: 0;
     display: flex;
+    flex-wrap: wrap;
 
     li {
         list-style: none;
@@ -29,17 +30,5 @@ ol.breadcrumb {
     .material-icons {
         font-size: 1rem;
         vertical-align: text-top;
-    }
-}
-
-
-@media screen and (max-width: @screen-xs-max) {
-    ul.breadcrumb,
-    ol.breadcrumb {
-        display: block;
-
-        li {
-            display: inline-block;
-        }
     }
 }

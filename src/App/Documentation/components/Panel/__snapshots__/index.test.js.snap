@@ -32,58 +32,39 @@ exports[`Documentation: Panel Overview renders 1`] = `
       </p>
     </Panel>
   </ComponentPreview>
-  <p>
-    You can choose whether to use 
-    <Property
-      value=".panel-header"
-    />
-     and 
-    <Property
-      value=".panel-footer"
-    />
-     or not. When using the 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;footer/&gt;
-    </PrismCode>
-     or 
-    <PrismCode
-      className="language-html"
-      component="code"
-    >
-      &lt;header/&gt;
-    </PrismCode>
-     they need to be direct children of 
-    <Property
-      value=".panel"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
+  <Alert
+    icon="warning"
+    type="warning"
   >
-    <Panel
-      footerBtnText="Footer button"
-      footerClass={true}
-      footerText="Footer content goes here."
-      headerClass={true}
-      subTitle="Panel subtitle"
-      title="Panel title"
-    >
-      <p>
-        Your main panel content is put here.
-      </p>
-      <p>
-        Some more content over here.
-      </p>
-      <p>
-        And one more line, just to be safe.
-      </p>
-    </Panel>
-  </ComponentPreview>
+    <h4>
+      Deprecation warning
+    </h4>
+    <p>
+      Only using 
+      <PrismCode
+        className="language-html"
+        component="code"
+      >
+        &lt;header&gt;
+      </PrismCode>
+       and 
+      <PrismCode
+        className="language-html"
+        component="code"
+      >
+        &lt;footer&gt;
+      </PrismCode>
+       is deprecated. Use our 
+      <Property
+        value=".panel-header"
+      />
+       and 
+      <Property
+        value=".panel-footer"
+      />
+       classes instead.
+    </p>
+  </Alert>
 </Fragment>
 `;
 

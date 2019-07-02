@@ -17,7 +17,7 @@ exports[`Component: Panel -  renders with a footer when prop footerText is provi
   className="panel panel-default"
 >
   <footer
-    className={null}
+    className="panel-footer"
   >
     <p>
       test
@@ -31,7 +31,7 @@ exports[`Component: Panel -  renders with a header and subtitle when prop title 
   className="panel panel-default"
 >
   <header
-    className={null}
+    className="panel-header"
   >
     <h2
       className="panel-title"
@@ -52,7 +52,7 @@ exports[`Component: Panel -  renders with a header without subtitle when prop ti
   className="panel panel-default"
 >
   <header
-    className={null}
+    className="panel-header"
   >
     <h2
       className="panel-title"

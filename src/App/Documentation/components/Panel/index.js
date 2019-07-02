@@ -3,6 +3,7 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 import PanelComponent from "@/Panel";
+import AlertComponent from "@/Alert";
 
 const bodyContent = (
     <>
@@ -73,24 +74,14 @@ const Overview = () => (
             >
                 {bodyContent}
             </PanelComponent>
-
         </ComponentPreview>
-        <p>
-            You can choose whether to use <Property value=".panel-header" /> and <Property value=".panel-footer" /> or not.
-            When using the <PrismCode className="language-html">{"<footer/>"}</PrismCode> or <PrismCode className="language-html">{"<header/>"}</PrismCode> they need to be direct children of <Property value=".panel" />.
-        </p>
-        <ComponentPreview language="html" codeFigure>
-            <PanelComponent
-                headerClass
-                title="Panel title"
-                subTitle="Panel subtitle"
-                footerClass
-                footerText="Footer content goes here."
-                footerBtnText="Footer button"
-            >
-                {bodyContent}
-            </PanelComponent>
-        </ComponentPreview>
+        <AlertComponent type="warning" icon="warning">
+            <h4>Deprecation warning</h4>
+            <p>
+                Only using <PrismCode className="language-html">{"<header>"}</PrismCode> and <PrismCode className="language-html">{"<footer>"}</PrismCode> is deprecated.
+                Use our <Property value=".panel-header" /> and <Property value=".panel-footer" /> classes instead.
+            </p>
+        </AlertComponent>
     </>
 );
 

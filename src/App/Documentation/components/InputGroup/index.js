@@ -86,16 +86,16 @@ const ButtonAddons = () => (
                 type="text"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="primary"
+                postfixBtnType="primary"
             /> {"\n\n"}
             <InputGroupComponent
                 type="text"
                 prefixType="button"
                 prefixValue="Button"
-                prefixBtnColor="secondary"
+                prefixBtnType="secondary"
                 postfixType="button"
                 postfixValue="Button"
-                postfixBtnColor="danger"
+                postfixBtnType="danger"
             />
         </ComponentPreview>
     </>

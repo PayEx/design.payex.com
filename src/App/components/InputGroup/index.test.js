@@ -47,12 +47,12 @@ describe("Component: InputGroup - ", () => {
         expect(console.error).toHaveBeenCalledTimes(2);
     });
 
-    it("throws an error if prefixBtnColor prop has an invalid value", () => {
+    it("throws an error if prefixBtnType prop has an invalid value", () => {
         const testValues = ["primary", "secondary", "danger", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" prefixBtnColor={testValue} />);
+            const wrapper = shallow(<InputGroup type="typetest" prefixBtnType={testValue} />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -71,12 +71,12 @@ describe("Component: InputGroup - ", () => {
         expect(console.error).toHaveBeenCalledTimes(2);
     });
 
-    it("throws an error if postfixBtnColor prop has an invalid value", () => {
+    it("throws an error if postfixBtnType prop has an invalid value", () => {
         const testValues = ["primary", "secondary", "danger", "invalid", "test"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" postfixBtnColor={testValue} />);
+            const wrapper = shallow(<InputGroup type="typetest" postfixBtnType={testValue} />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -92,7 +92,7 @@ describe("Component: InputGroup - ", () => {
     });
 
     it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
+        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnType="primary" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("btn btn-primary");

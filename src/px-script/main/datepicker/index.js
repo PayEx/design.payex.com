@@ -21,6 +21,7 @@ const _createDatepicker = datepicker => {
         datepickerAllowinput
     } = datepicker.dataset;
     let format = "";
+    const inputAddon = datepicker.parentElement.querySelector(".btn");
 
     if (datepickerFormat && !!formats[datepickerFormat]) {
         format = formats[datepickerFormat];
@@ -51,6 +52,10 @@ const _createDatepicker = datepicker => {
     }
 
     const datepickerObj = flatpickr(datepicker, options);
+
+    if (inputAddon) {
+        inputAddon.addEventListener("click", () => datepickerObj.toggle());
+    }
 
     _datepickers.push(datepickerObj);
 

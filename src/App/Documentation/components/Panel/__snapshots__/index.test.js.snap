@@ -54,15 +54,15 @@ exports[`Documentation: Panel Overview renders 1`] = `
       >
         &lt;footer&gt;
       </PrismCode>
-       is deprecated. Use our 
+       is deprecated. Add 
       <Property
         value=".panel-header"
       />
-       and 
+       or 
       <Property
         value=".panel-footer"
       />
-       classes instead.
+       to your panel header/footer element.
     </p>
   </Alert>
 </Fragment>

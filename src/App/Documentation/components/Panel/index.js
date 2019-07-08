@@ -79,7 +79,7 @@ const Overview = () => (
             <h4>Deprecation warning</h4>
             <p>
                 Only using <PrismCode className="language-html">{"<header>"}</PrismCode> and <PrismCode className="language-html">{"<footer>"}</PrismCode> is deprecated.
-                Use our <Property value=".panel-header" /> and <Property value=".panel-footer" /> classes instead.
+                Add <Property value=".panel-header" /> or <Property value=".panel-footer" /> to your panel header/footer element.
             </p>
         </AlertComponent>
     </>

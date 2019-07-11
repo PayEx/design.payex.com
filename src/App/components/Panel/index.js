@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPadding, halfPadding, darkMode, bodyContent, panelTable, footerText }) => {
+const Panel = ({ id, type, title, subTitle, removeBottomPadding, removeAllPadding, halfPadding, darkMode, children, panelTable, footerText }) => {
     const panelClasses = classnames(
         "panel",
         type ? `panel-${type}` : "panel-default",
@@ -16,30 +16,26 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
         <section
             className={panelClasses}
             id={id}>
-            {title ?
-                <header>
+            {title
+                ? (<header className="panel-header">
                     <h2 className="panel-title">{title}</h2>
                     {subTitle ? <p className="panel-sub-title">{subTitle}</p> : null}
-                </header>
+                </header>)
                 : null}
-            {bodyContent ?
-                <div className="panel-body">
-                    {
-                        bodyContent.map((text, i) => (
-                            <p key={i}>{text}</p>
-                        ))
-                    }
-                </div>
+            {children
+                ? (<div className="panel-body">
+                    {children}
+                </div>)
                 : null}
-            {panelTable ?
-                <div className="panel-table">
-                    {panelTable()}
-                </div>
+            {panelTable
+                ? (<div className="panel-table">
+                    {panelTable}
+                </div>)
                 : null}
-            {footerText ?
-                <footer>
+            {footerText
+                ? (<footer className="panel-footer">
                     <p>{footerText}</p>
-                </footer>
+                </footer>)
                 : null}
         </section>
     );
@@ -47,6 +43,7 @@ const Panel = ({ title, subTitle, id, type, removeBottomPadding, removeAllPaddin
 
 Panel.propTypes = {
     title: PropTypes.string,
+    headerClass: PropTypes.bool,
     subTitle: PropTypes.string,
     id: PropTypes.string,
     type: PropTypes.oneOf(["brand", "default", "muted", ""]),
@@ -54,7 +51,8 @@ Panel.propTypes = {
     removeAllPadding: PropTypes.bool,
     removeBottomPadding: PropTypes.bool,
     darkMode: PropTypes.bool,
-    bodyContent: PropTypes.array,
+    bodyContent: PropTypes.object,
+    footerClass: PropTypes.bool,
     footerText: PropTypes.string
 };
 

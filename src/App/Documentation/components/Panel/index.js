@@ -3,14 +3,17 @@ import PrismCode from "react-prism";
 
 import { ComponentPreview, DocContainer, Property } from "#";
 import PanelComponent from "@/Panel";
+import AlertComponent from "@/Alert";
 
-const bodyContent = [
-    "Your main panel content is put here.",
-    "Some more content over here.",
-    "And one more line, just to be safe."
-];
+const bodyContent = (
+    <>
+        <p>Your main panel content is put here.</p>
+        <p>Some more content over here.</p>
+        <p>And one more line, just to be safe.</p>
+    </>
+);
 
-const TableContent = () => (
+const TableContent = (
     <table className="table">
         <thead>
             <tr>
@@ -59,8 +62,8 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            A panel consists of three parts: A header, a body and a footer. You can mostly put whatever you want in any of these,
-            but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
+            A panel consists of three parts: A header, a body and a footer.
+            You can mostly put whatever you want in any of these, but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
@@ -68,9 +71,17 @@ const Overview = () => (
                 subTitle="Panel subtitle"
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-                bodyContent={bodyContent}
-            />
+            >
+                {bodyContent}
+            </PanelComponent>
         </ComponentPreview>
+        <AlertComponent type="warning" icon="warning">
+            <h4>Deprecation warning</h4>
+            <p>
+                Only using <PrismCode className="language-html">{"<header>"}</PrismCode> and <PrismCode className="language-html">{"<footer>"}</PrismCode> is deprecated.
+                Add <Property value=".panel-header" /> or <Property value=".panel-footer" /> to your panel header/footer element.
+            </p>
+        </AlertComponent>
     </>
 );
 
@@ -78,8 +89,8 @@ const PanelHeaders = () => (
     <>
         <h2 id="panel-headers">Panel headers</h2>
         <p>
-            You can pick between two different panel headers, brand color with white text and white with green text. add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to
-            the header to use one of them.
+            You can pick between two different panel headers, brand color with white text and white with green text.
+            Add <Property value=".panel-default" /> or <Property value=".panel-brand" /> to the header to use one of them.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent title="Default panel" />{"\n\n"}
@@ -97,11 +108,12 @@ const PanelDark = () => (
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 darkMode
-            />
+            >
+                {bodyContent}
+            </PanelComponent>
         </ComponentPreview>
     </>
 );
@@ -117,10 +129,11 @@ const PanelMuted = () => (
                 type="muted"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
-            />
+            >
+                {bodyContent}
+            </PanelComponent>
         </ComponentPreview>
     </>
 );
@@ -130,19 +143,20 @@ const PanelTable = () => (
         <h2 id="panel-with-table">Displaying a full width table</h2>
         <p>
             To display a full width table in a panel use <Property value=".panel-table" /> on a div wrapping the table.
-            Put <Property value=".panel-table" /> as a direct child of <Property value=".panel" />. Tables put in a panel are given a
-            border bottom to seperate it from the following elements.
+            Put <Property value=".panel-table" /> as a direct child of <Property value=".panel" />.
+            Tables put in a panel are given a border bottom to seperate it from the following elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PanelComponent
                 type="brand"
                 title="Panel title"
                 subTitle="Panel subtitle"
-                bodyContent={bodyContent}
                 footerText="Footer content goes here."
                 footerBtnText="Footer button"
                 panelTable={TableContent}
-            />
+            >
+                {bodyContent}
+            </PanelComponent>
         </ComponentPreview>
     </>
 );
@@ -163,4 +177,4 @@ const Panel = () => (
 export default Panel;
 
 /* For testing */
-export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable, TableContent };
+export { Overview, PanelHeaders, PanelDark, PanelMuted, PanelTable };

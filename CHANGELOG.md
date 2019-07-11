@@ -5,6 +5,7 @@
 ### Added
 
 - Added class .action-toggle to .action-list, selecting on .material-icons is deprecated.
+- Added class .panel-header and .panel-footer to panel. Support for <header> and <footer> without classes is deprecated and will be removed on the next major.
 
 ### Changed
 

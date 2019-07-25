@@ -47,7 +47,12 @@ module.exports = (env, argv) => {
             hot: true,
             clientLogLevel: "warning",
             historyApiFallback: true,
-            disableHostCheck: true /* Temporary fix for the websocket issue with webpack dev server on IE11 [AW] */
+            /*
+                Temporary fix for the websocket issue with webpack dev server on IE11 [AW]
+                https://stackoverflow.com/questions/51893524/websockets-not-closing-on-ie-if-closing-handshake-is-never-made
+                TODO: Keep an eye out for fixes
+            */
+            disableHostCheck: true
         },
         module: {
             rules: [
@@ -82,7 +87,6 @@ module.exports = (env, argv) => {
                             loader: "postcss-loader",
                             options: {
                                 plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%", "ie >= 11"],
                                     grid: true
                                 })
                             }
@@ -105,9 +109,7 @@ module.exports = (env, argv) => {
                         {
                             loader: "postcss-loader",
                             options: {
-                                plugins: () => autoprefixer({
-                                    browsers: ["last 3 versions", "> 1%"]
-                                })
+                                plugins: () => autoprefixer()
                             }
                         }
                     ]

@@ -23,19 +23,20 @@ environment:
   slack_designguide_webhook:
     secure: gxWz5+nY3Ctg2JTqo5RQVwHA+UNxiB/H1u72IC71b3oBZj/dxqBLc1/EYZtxzWjiOCXPSOfKJ485+XhtyTt1kNjHon7JWRftucuOyhaozmw=
   # Codecov
-  CODECOV_TOKEN:
+  codecov_token:
     secure: aSdbrWvXrfwEJ9+bz03FYLUSD7m55aqN0npBW+FKhC9UegsoI73jPMzlNFicBkmS
 
 # cache:
 #   - node_modules
 
 install:
+- ps: Install-Product node $env:nodejs_version x64
 - cmd: >-
     choco install gitversion.portable -pre -y
 
     gitversion /l console /output buildserver
 
-    npm install
+    npm ci
 
     npm install -g codecov
 

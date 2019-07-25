@@ -1,21 +1,17 @@
 # Changelog
 
-## [2.2.0] - 2019-05-23
+## [2.3.0] - 2019-07-25
 
 ### Added
 
-- Added new init functionality. You can now pass an ID init one specific component.
-- Added return values to init. It now returns an object, array of objects or null.
-- Added javascript documentation to getting-started section.
-- Added component specific documentation about functions.
-- Added open and close by ID to actionlist object
-- Added close by ID to alert object
-- Added open and close by ID to datepicker object
-- Added open and close by ID to nav object
-- Added open and close by ID to tabs object
-- Added open and close by ID to topbar object
-- Added option to disable the listener resposible for closing the sheet on clicking outside (data-require-action).
+- Added class .action-toggle to .action-list, selecting on .material-icons is deprecated.
+- Added class .panel-header and .panel-footer to panel. Support for <header> and <footer> without classes is deprecated and will be removed on the next major.
 
-### Removed
+### Changed
 
-- Dialog can no longer be closed by clicking outside of it or pressing the ESC key.
+- Changed label, help-block, legend and placeholder appearance to improve readability.
+
+### Fixed
+
+- datepicker.init() now deletes existing flatpickr instances when init is called more than once.
+- Fixed bug making our charts documentation crash.

@@ -101,8 +101,10 @@
         }
     }
 
+    // TODO: remove header selector
     // Optional heading
-    > header {
+    > header,
+    .panel-header {
         padding: @base-padding;
         padding-left: @base-padding-xl;
         border-bottom: 1px solid @panel-default-border-color;
@@ -138,8 +140,10 @@
         }
     }
 
+    // TODO: remove footer selector
     // Optional footer (stays gray in every modifier class)
-    > footer {
+    > footer,
+    .panel-footer {
         background-color: @background-body;
         padding: @panel-footer-padding;
         border-top: 1px solid @panel-default-border-color;

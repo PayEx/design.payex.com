@@ -2,12 +2,14 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled }) => (
-    (type === "button") ?
-        <button type="button" className={`btn btn-${color}`} disabled={disabled}>
-            {value}
-        </button>
-        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons">{value}</i> : value}</span>
+const Addon = ({ icon, value, disabled }) => (
+    <span className="input-group-addon" disabled={disabled}>{icon ? <>{"\n"}<i className="material-icons">{value}</i>{"\n"}</> : value}</span>
+);
+
+const BtnAddon = ({ className, value, valIcon, btnType, disabled }) => (
+    <button type="button" className={`btn${btnType ? ` btn-${btnType}` : ""}${className ? ` ${className}` : ""}`} disabled={disabled}>{"\n"}
+        {!valIcon ? value : <i className="material-icons">{value}</i>}{"\n"}
+    </button>
 );
 
 const Feedback = ({ icon }) => (
@@ -32,10 +34,10 @@ const InputGroup = ({
     selectOptions,
     prefixValue,
     prefixType,
-    prefixBtnColor,
+    prefixBtnType,
     postfixValue,
     postfixType,
-    postfixBtnColor,
+    postfixBtnType,
     feedbackIcon,
     helpBlock,
     errorMessage,
@@ -65,7 +67,13 @@ const InputGroup = ({
         <div className="form-group">{"\n"}
             {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             <div className={inputGrpClasses}>{"\n"}
-                {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
+                {!prefixValue
+                    ? null
+                    : (!prefixType
+                        ? <Addon value={prefixValue}/>
+                        : (prefixType === "button"
+                            ? <BtnAddon value={prefixValue} btnType={prefixBtnType} disabled={disabled} />
+                            : <Addon icon={prefixType} value={prefixValue} disabled={disabled} />))}
                 {type === "textarea" ?
                     <textarea {...attrs} ></textarea>
                     : type === "select" ?
@@ -80,7 +88,13 @@ const InputGroup = ({
                         <input {...attrs} />}
                 {"\n"}
                 {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
+                {!postfixValue
+                    ? null
+                    : (!postfixType
+                        ? <Addon value={postfixValue}/>
+                        : (postfixType === "button"
+                            ? <BtnAddon value={postfixValue} btnType={postfixBtnType} disabled={disabled} />
+                            : <Addon icon={postfixType} value={postfixValue} disabled={disabled} />))}
             </div>
             {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
         </div>
@@ -103,10 +117,10 @@ InputGroup.propTypes = {
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
+    prefixBtnType: PropTypes.oneOf(["primary", "secondary", "danger"]),
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["primary", "secondary", "danger"]),
+    postfixBtnType: PropTypes.oneOf(["primary", "secondary", "danger"]),
     feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
@@ -117,3 +131,8 @@ InputGroup.propTypes = {
 };
 
 export default InputGroup;
+
+export {
+    Addon,
+    BtnAddon
+};

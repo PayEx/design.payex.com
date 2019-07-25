@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Addon } from "@/InputGroup";
+import { Addon, BtnAddon } from "@/InputGroup";
 
 const Datepicker = ({ format, time, min, max, months, value, label, prefixValue, prefixType, fulldate, mode, allowinput, required, id }) => {
     const attrs = {
+        id,
         className: "form-control",
         type: "text",
         "data-datepicker": "",
@@ -16,8 +17,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
         "data-datepicker-fulldate": fulldate || null,
         "data-datepicker-mode": mode || null,
         "data-datepicker-allowinput": allowinput || null,
-        "data-required": required || null,
-        id
+        "data-required": required || null
     };
 
     return (
@@ -25,7 +25,14 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
             <div className="form-group">{"\n"}
                 <label htmlFor={id || null}>{label}</label>{"\n"}
                 <div className="input-group">{"\n"}
-                    {prefixValue ? <Addon type={ prefixType } value={ prefixValue } /> : null}{"\n"}
+                    {!prefixValue
+                        ? null
+                        : (!prefixType
+                            ? <Addon value={prefixValue}/>
+                            : (prefixType === "button"
+                                ? <BtnAddon value={prefixValue} className="input-group-addon" valIcon />
+                                : <Addon icon={prefixType} value={prefixValue} />))}
+                    {"\n"}
                     <input {...attrs} />{"\n"}
                 </div>
             </div>
@@ -34,6 +41,7 @@ const Datepicker = ({ format, time, min, max, months, value, label, prefixValue,
 
 Datepicker.propTypes = {
     format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
+    prefixType: PropTypes.oneOf(["button", "icon"]),
     time: PropTypes.bool,
     min: PropTypes.string,
     max: PropTypes.string,

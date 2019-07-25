@@ -30,7 +30,24 @@ const SimpleDatepicker = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simple-datepicker"
+                id="simple-datepicker-1"
+            />
+        </ComponentPreview>
+    </>
+);
+
+const ClickableAddon = () => (
+    <>
+        <h2 id="clickable-addon">Clickable addon</h2>
+        <p>
+            If you want a clickable icon, then use a button with class <Property value=".input-group-addon" />.
+        </p>
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <DatepickerComponent
+                label="Date"
+                prefixType="button"
+                prefixValue="event"
+                id="addon-btn"
             />
         </ComponentPreview>
     </>
@@ -48,7 +65,7 @@ const AllowInput = () => (
                 label="Date"
                 prefixType="icon"
                 prefixValue="event"
-                id="simple-datepicker"
+                id="simple-datepicker-2"
                 allowinput
             />
         </ComponentPreview>
@@ -407,6 +424,7 @@ class Datepickers extends Component {
                 </p>
                 <AboutDatepickers />
                 <SimpleDatepicker />
+                <ClickableAddon />
                 <AllowInput />
                 <HumanReadable />
                 <InitialValue />

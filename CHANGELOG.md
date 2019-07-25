@@ -14,5 +14,6 @@
 ### Fixed
 
 - datepicker.init() now deletes existing flatpickr instances when init is called more than once.
+- Fixed bug making our charts documentation crash.
 
 ### Removed

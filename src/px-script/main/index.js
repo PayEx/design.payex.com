@@ -40,7 +40,7 @@ const px = {
     validation
 };
 
-window.px = px;
+window.px = window.px ? Object.assign(window.px, px) : px;
 
 if (!window.stopPx) {
     document.addEventListener("DOMContentLoaded", () => {

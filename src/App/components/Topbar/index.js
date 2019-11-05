@@ -45,10 +45,10 @@ const Topbar = ({ topbarContent, fixed, logout, id }) => (
     <header className={`topbar${fixed ? " topbar-fixed" : ""}`} id={id} >{"\n"}
         <>
             {topbarContent ?
-            <>
-                <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
-                <TopbarMenu menu={topbarContent} />
-            </> : null}
+                <>
+                    <TopbarBtn icon={topbarContent.btn.icon} text={topbarContent.btn.text} target={topbarContent.id} />{"\n"}
+                    <TopbarMenu menu={topbarContent} />
+                </> : null}
             {"\n"}<a href="#" className="topbar-logo" onClick={e => e.preventDefault()}></a>{"\n"}
             {logout ?
                 <>

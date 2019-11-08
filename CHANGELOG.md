@@ -1,17 +1,8 @@
 # Changelog
 
-## [2.3.0] - 2019-07-25
-
-### Added
-
-- Added class .action-toggle to .action-list, selecting on .material-icons is deprecated.
-- Added class .panel-header and .panel-footer to panel. Support for <header> and <footer> without classes is deprecated and will be removed on the next major.
-
-### Changed
-
-- Changed label, help-block, legend and placeholder appearance to improve readability.
+## [2.3.1] - 2019-11-08
 
 ### Fixed
 
-- datepicker.init() now deletes existing flatpickr instances when init is called more than once.
-- Fixed bug making our charts documentation crash.
+ - Bump eslint-utils from 1.3.1 to 1.4.3 for security reasons
+ - While we're at it, basically bump every node package that doesn't require a lot of refactoring because it's cool to be up-to-date

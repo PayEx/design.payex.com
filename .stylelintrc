@@ -17,6 +17,7 @@
         "declaration-block-semicolon-space-after": "always-single-line",
         "declaration-no-important": true,
         "color-hex-length": "long",
+        "function-calc-no-invalid": null,
         "font-family-no-missing-generic-family-keyword": null,
         "font-family-name-quotes": "always-where-recommended",
         "indentation": 4,

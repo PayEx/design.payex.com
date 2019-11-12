@@ -12,6 +12,8 @@ module.exports = {
         "enzyme-to-json/serializer"
     ],
     testPathIgnorePatterns: [
-        "\\.spec\\.js"
+        "\\.spec\\.js",
+        // The following snapshot is now 360k lines long and breaks AppVeyor... solution: Delete and ignore it [THN]
+        "./Documentation/utils/ComponentPreview/"
     ]
 };

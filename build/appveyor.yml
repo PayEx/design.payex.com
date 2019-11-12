@@ -25,6 +25,7 @@ environment:
   # Codecov
   codecov_token:
     secure: aSdbrWvXrfwEJ9+bz03FYLUSD7m55aqN0npBW+FKhC9UegsoI73jPMzlNFicBkmS
+  nodejs_version: "10"
 
 # cache:
 #   - node_modules
